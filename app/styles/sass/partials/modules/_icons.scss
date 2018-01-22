@@ -1,0 +1,144 @@
+.icon-social {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-color: $base-dark;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  margin-right: 5px;
+
+  @include query($tablet) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    background-color: $accent-red;
+  }
+
+  &:before {
+    font: 30px $font-icons;
+    position: relative;
+    color: $base-white;
+    top: 10px;
+  }
+}
+
+.footer-bg .icon-social {
+  background-color: $base-white;
+
+  &:before {
+    color: $base-dark;
+  }
+
+  &:hover {
+    background-color: $accent-red;  
+  }
+}
+
+.icon-social:hover ~ .icon-social:before {
+  color: $base-white;
+}
+
+.icon-facebook:before {
+  content: '\f09a';
+}
+
+.icon-twitter:before {
+  content: '\f099'; 
+}
+
+.icon-gplus:before {
+  content: '\f0d5'; 
+  font-size: 26px;
+}
+
+.icon-instagram:before {
+  content: '\f16d'; 
+}
+
+.icon-pinterest:before {
+  content: '\f0d2'; 
+}
+
+.icon-contact {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: $main-red; 
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.icon-contact:before {
+  color: $base-white;
+  font: 20px $font-icons;
+  position: relative;
+}
+
+.icon-phone:before {
+  content: '\f095'; 
+  top: -2px;
+}
+
+.icon-mail:before {
+  content: '\f0e0'; 
+  font-size: 15px;
+  top: -5px;
+}
+
+.bullet-icon:before {
+    font: 20px $font-icons;
+    color: $main-red;
+    display: inline-block;
+    margin-right: 15px;
+
+    @include query($desktop-small) {
+      font-size: 24px;
+    }
+
+    @include query($desktop-hd) {
+      font-size: 28px;
+      margin-right: 20px;
+    }
+}
+
+.icon-info:before {
+  content: '\f05a';
+}
+
+.input-icon:after {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font: 20px $font-icons;
+  display: inline-block;
+
+  @include query($desktop-small) {
+    font-size: 24px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 28px;
+  }
+}
+
+.icon-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-arrow:after {
+  margin-left: 10px;
+  position: absolute;
+  top: -5px;
+  font: 40px $font-icons;
+  display: inline-block;
+  color: $main-red;
+  content: '\f0a9';
+}
+
+.icon-arrow:hover:after {
+  color: $accent-red;
+}

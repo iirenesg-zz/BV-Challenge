@@ -1,8 +1,17 @@
 .company-info {
-  grid-column: 3 / span 6;
+  grid-column: 1 / span 3;
+  grid-row-start: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include query($tablet) {
+    grid-column: 2 / span 3;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 3 / span 6;
+  }
 }
 
 .info-box {
@@ -19,11 +28,25 @@
 }
 
 .info-col {
-  width: 50%;
+  width: 100%;
+
+  @include query($tablet) {
+    width: 50%;
+  }
 }
 
 .risk-info {
-  grid-column: 5 / span 8;
+  grid-column: 1 / span 3;
+  grid-row-start: 3;
+
+  @include query($tablet) {
+    grid-column: 3 / span 4;
+    grid-row-start: 1;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 5 / span 8;
+  }
 
   h2 {
     margin-bottom: 30px;
@@ -60,6 +83,7 @@
 
   p {
     margin: 0;
+    width: 60%;
   }
 
   img {

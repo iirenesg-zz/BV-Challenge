@@ -1,0 +1,228 @@
+.tax-identifier {
+  grid-column: 1 / span 2;
+  grid-row-start: 2;
+  width: 60%;
+  color: $base-white;
+  position: relative;
+
+  @include query($tablet) {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row-start: 1;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 1 / span 2;
+  }
+}
+
+.tax-info {
+  margin-top: 20%;
+
+  @include query($tablet) {
+    text-align: center;
+  }
+
+  @include query($desktop-small) {
+    margin-top: 30%;
+  }
+
+  span {
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    @include query($tablet) {
+      margin-bottom: 10px;
+    }
+
+    @include query($desktop-small) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include query($desktop-hd) {
+      font-size: 28px;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.svg-bg {
+  position: absolute;
+  z-index: -1;
+}
+
+.tax-bg {
+  fill: $base-dark;
+}
+
+.update-bg {
+  fill: $main-red;
+}
+
+.overview-bg {
+  fill: $contrast-blue;
+}
+
+.report-updates {
+  grid-column: 2 / span 2;
+  grid-row-start: 2;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+
+  @include query($tablet) {
+    grid-column: 5 / span 2;
+    grid-row-start: 1;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 9 / span 4;
+  }
+
+  @include query($desktop-hd) {
+    width: 80%;
+  }
+}
+
+.main-bg {
+  padding-top: 160px;
+  width: 300vw;
+  z-index: -2;
+}
+
+.main-bg-l {
+  display: none;
+
+  @include query($desktop-small) {
+    display: block;
+  }
+}
+
+.main-bg-s {
+  @include query($desktop-small) {
+    display: none;
+  }
+}
+
+.chart {
+  position: relative;
+}
+
+.chart-info {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 58%;
+  text-align: center;
+  color: $base-white;
+
+  @include query($desktop-small) {
+    top: 55%;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.risk-chart-info {
+  top: 60%;
+}
+
+.risk-chart {
+  grid-column: 1 / span 3;
+  grid-row-start: 1;
+  width: 90%;
+  margin: 0 auto;
+
+  @include query($tablet) {
+    grid-column: 1 / span 2;
+    grid-row-start: 2;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 1 / span 4;
+    width: 75%;
+  }
+}
+
+.chart-number {
+  font: 84px $font-family-accent;
+  line-height: 1;
+
+  @include query($desktop-small) {
+    font-size: 110px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 140px;
+  }
+}
+
+.risk-number {
+  position: relative;
+  left: -5%;
+}
+
+.chart-text {
+  text-transform: uppercase;
+}
+
+.report-update-text {
+  font: italic 600 22px $font-family-base;
+
+  @include query($desktop-small) {
+    font-size: 30px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 36px;
+  }
+}
+
+.risk-text {
+  font: italic 600 16px $font-family-base;
+  text-transform: uppercase;
+
+  @include query($desktop-small) {
+    font-size: 24px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 28px;
+  }
+}
+
+.chart-label {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.report-update-label {
+  font: italic 700 12px $font-family-base;
+
+  @include query($desktop-small) {
+    font-size: 16px;
+  }
+}
+
+.risk-disclaimer {
+  font: italic 700 14px $font-family-base;
+  text-align: center;
+  width: 65%;
+  margin: 30px auto 0;
+
+  @include query($desktop-small) {
+    width: 100%;
+    margin: 30px 0 0;
+    font-size: 16px;
+  }
+
+  @include query($desktop-hd) {
+    margin-top: 40px;
+  }
+}

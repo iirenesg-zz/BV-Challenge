@@ -1,0 +1,42 @@
+.member-form {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.field button, .button-box {
+  margin: 20px 0 60px;
+}
+
+.button-box button {
+  margin-right: 15px;
+}
+
+.field-hidden {
+  margin-bottom: 30px;
+
+  input {
+    height: 35px;
+  }
+}
+
+.field {
+  position: relative;
+
+  .underline {
+    width: 100%;
+    max-width: 500px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: $contrast-blue;
+    display: block;
+    transition: all .2s;
+  }
+
+  input {
+    transition: all .5s;
+  }
+}
+
+.hidden .field input{
+  margin-left: 10px;
+}
