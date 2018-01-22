@@ -1,0 +1,60 @@
+<main>
+  <h1 class="heading">Account Settings</h1>
+
+  <section class="section-grid main-wrapper section-grid m-content">
+    
+    <div class="col-left">
+      <div class="info-block m-text">
+        <h2 class="h-h2">The Honest Company, Inc.</h2>
+        <p>
+          <span>12130 Millennium Dr, Los Angeles, CA 90094</span>
+          <span>(888) 862-8818</span>
+        </p>
+        <p class="highlight-text">Your Member ID is <strong>791509951</strong></p>
+        <button class="btn-white btn-logout">Log out of xyz</button>      
+      </div>
+    </div>
+
+    <div class="member-form col-right">
+
+      <div class="field-box">
+        {{ field-default id="name-default" name='name' type='text' label='Name' }}
+        <form id="name-hidden" class="form-hidden hidden">
+          {{ field-hidden name='first-name' type='text' label='First Name' autofocus='true' }}
+          {{ field-hidden name='last-name' type='text' label='Last Name' autofocus='false' }}
+          <div class="button-box">
+            <button class="btn-outlined btn-form" {{action "saveName"}}>Save</button>
+            <button class="btn-simple" {{action "cancel" "name"}}>Cancel</button>
+          </div> {{! button-box }}
+        </form> {{! form-hidden }}
+      </div> {{! field-box }}
+
+      <div class="field-box">
+        {{ field-default id="email-default" name='email' type='email' label='Email Address' }}
+        <form id="email-hidden" class="form-hidden hidden">
+          {{ field-hidden name='new-email' type='email' label='Email Address' autofocus='true' }}
+          <div class="button-box">
+            <button class="btn-outlined btn-form">Save</button>
+            <button class="btn-simple" {{action "cancel" "email"}}>Cancel</button>
+          </div> {{! button-box }}
+        </form> {{! form-hidden }}
+      </div> {{! field }}
+
+      <div class="field">
+        {{ field-default id="password-default" name='password' type='password' label='Password' }}
+        <form id="password-hidden" class="form-hidden hidden">
+          {{ field-hidden name='old-password' type='password' label='Enter Current Password' autofocus='true' }}
+          {{ field-hidden name='new-password' type='password' label='New Password  (8 character minimum)' autofocus='false' }}
+          {{ field-hidden name='confirm-password' type='password' label='Re-enter New Password' autofocus='false' }}
+          <div class="button-box">
+            <button class="btn-outlined btn-form">Save</button>
+            <button class="btn-simple" {{action "cancel" "password"}}>Cancel</button>
+          </div> {{! button-box }}
+        </form> {{! form-hidden }}
+      </div> {{! field }}
+
+    </div> {{! member-form }}
+
+  </section>
+
+</main>

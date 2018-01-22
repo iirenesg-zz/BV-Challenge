@@ -1,0 +1,83 @@
+<div class="main-bg">
+  <svg class="svg-bg overview-bg" viewBox="0 0 100 100">
+    <defs>
+      <mask id="bg-mask">
+        <rect x="0" y="0" width="100vw" height="50%" />
+      </mask>
+    </defs>
+    <g mask="url(#bg-mask)">
+      <circle cx="75" cy="150" r="150"/>
+    </g>
+  </svg>
+</div> {{! main-bg }}
+
+<main class="no-padding">
+  <h1 class="heading">The Honest Company, Inc.</h1>
+
+  <section>
+    <div class="main-wrapper section-grid l-content">
+
+      <div class="tax-identifier">
+        <svg class="svg-bg tax-bg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+        <div class="tax-info">
+          <h3 class="h-h3">Tax ID</h3>
+          <span>xx-xxx<strong>4861</strong></span>
+        </div> {{! tax-info }}
+      </div> {{! tax-identifier -}}
+
+      <div class="company-info l-text">
+        {{info-box label="Doing business as" info="The Honest Company"}}
+        {{info-box label="Address" info="12130 Millennium Dr, Los Angeles, CA 90094"}}
+        <div class="info-2col">
+          {{info-box label="Phone number" info="(888) 862-8818"}}
+          {{info-box label="Website" info="honest.com"}}
+        </div> {{! info-2col }}
+      </div> {{! company-info }}
+
+      <div class="report-updates chart">
+        <svg id="report-update-container" class="svg-bg update-bg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+        {{ report-update-chart }}
+        <div class="chart-info">
+          <span class="chart-label chart-text report-update-label">Report updates in</span>
+          <span class="chart-number">22</span>
+          <span class="chart-text report-update-text">days</span>
+        </div> {{! chart-info}}
+      </div> {{! report-updates }}
+
+    </div> {{! wrapper}}
+  </section> {{! company-overview }}
+
+  <section id="risk-section" class="bg-dark">
+    <div class="main-wrapper section-grid l-content">
+      <div class="risk-chart">
+        <div class="chart" id="risk-score-container">
+          {{ risk-score-chart }}
+          <div class="chart-info risk-chart-info">
+            <span class="chart-number risk-number">84</span>
+            <span class="chart-label chart-text risk-text">Low Risk</span>
+          </div> {{! risk-chart-info}}
+        </div> {{! risk-score-container }}
+        <p class="chart-text risk-disclaimer">Higher scores are better</p>
+      </div> {{! risk-chart }}
+      <div class="risk-info">
+        <h2 class="h-h2">Experian Credit Risk Score</h2>
+        <h3 class="h-h3">Factors lowering this score</h3>
+        <ul class="risk-list l-text">
+          <li class="bullet-icon">Balance of recently delinquent commercial accounts</li>
+          <li class="bullet-icon">Balance of commercial accounts at worst delinquency</li>
+          <li class="bullet-icon">Commercial account delinquency in the last 6 months</li>
+        </ul>
+        {{info-toggle}}
+      </div> {{! risk-info }}
+    </div> {{! wrapper }}
+  </section> {{! risk-scores }}
+  <section class="bg-light">
+    <div class="risk-subsection main-wrapper">
+      <p>This report was generated on <strong>July 17, 2017</strong> and will be updated in <strong>22 days</strong></p>
+      <img src="/assets/images/experian.svg" alt="Powered by Experian">
+    </div>
+  </section>
+
+</main>
+
+{{outlet}}
