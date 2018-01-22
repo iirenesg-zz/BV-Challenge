@@ -1,0 +1,36 @@
+.assistance-box {
+  background-color: $contrast-blue;
+  grid-column: 8 / span 5;
+  grid-row: 1 / span 2;
+  position: relative;
+  width: 50vw;
+  border-radius: 10px 0 0 10px;
+  padding: 20px;
+  color: $base-dark;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.assistance-info {
+  margin-bottom: 30px;
+
+  h4 {
+    font: italic 600 24px $font-family-base;
+    color: $main-red;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-left: 40px;
+
+  }
+
+  span {
+    font-weight: 600;
+    color: $main-red;
+  }
+}
