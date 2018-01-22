@@ -1,0 +1,20 @@
+.risk-list {
+  margin-bottom: 30px;
+
+  @include query($desktop-hd) {
+    margin-bottom: 40px;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 15px;
+
+    @include query($desktop-hd) {
+      margin-bottom: 20px;
+    }
+  }
+
+  li:before {
+    content: '\f00d';
+  }
+}

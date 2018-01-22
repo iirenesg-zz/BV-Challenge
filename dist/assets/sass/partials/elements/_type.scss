@@ -1,0 +1,38 @@
+.s-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.m-text {
+  font-size: 16px;
+  line-height: 22px;
+
+  @include query($desktop-small) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.l-text {
+  font-size: 20px;
+  line-height: 26px;
+
+  @include query($desktop-small) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.highlight-text {
+  font-size: 26px;
+  font-style: italic;
+  
+  strong {
+    font-weight: 600;
+  }
+}

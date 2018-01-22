@@ -1,0 +1,172 @@
+.tax-identifier {
+  grid-column: 1 / span 2;
+  color: $base-white;
+  position: relative;
+}
+
+.tax-info {
+
+  margin-top: 30%;
+
+  @include query($tablet) {
+    text-align: center;
+  }
+
+  span {
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    @include query($tablet) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    @include query($desktop-small) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include query($desktop-hd) {
+      font-size: 28px;
+    }
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.svg-bg {
+  position: absolute;
+  z-index: -1;
+}
+
+.tax-bg {
+  fill: $base-dark;
+}
+
+.update-bg {
+  fill: $main-red;
+}
+
+.overview-bg {
+  fill: $contrast-blue;
+}
+
+.report-updates {
+  grid-column: 9 / span 4;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+
+  @include query($desktop-hd) {
+    width: 80%;
+  }
+}
+
+.main-bg {
+  padding-top: 160px;
+  width: 300vw;
+  z-index: -2;
+}
+
+.chart {
+  position: relative;
+}
+
+.chart-info {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 55%;
+  text-align: center;
+  color: $base-white;
+
+  span {
+    display: block;
+  }
+}
+
+.risk-chart {
+  grid-column: 1 / span 4;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.risk-chart-info {
+  top: 60%;
+}
+
+.chart-number {
+  font: 84px $font-family-accent;
+  line-height: 1;
+
+  @include query($desktop-small) {
+    font-size: 110px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 140px;
+  }
+}
+
+.risk-number {
+  position: relative;
+  left: -5%;
+}
+
+.chart-text {
+  text-transform: uppercase;
+}
+
+.report-update-text {
+  font: italic 600 22px $font-family-base;
+
+  @include query($desktop-small) {
+    font-size: 30px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 36px;
+  }
+}
+
+.risk-text {
+  font: italic 600 16px $font-family-base;
+  text-transform: uppercase;
+
+  @include query($desktop-small) {
+    font-size: 24px;
+  }
+
+  @include query($desktop-hd) {
+    font-size: 28px;
+  }
+}
+
+.chart-label {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.report-update-label {
+  font: italic 700 12px $font-family-base;
+
+  @include query($desktop-small) {
+    font-size: 16px;
+  }
+}
+
+.risk-disclaimer {
+  font: italic 700 14px $font-family-base;
+  margin-top: 30px;
+  text-align: center;
+
+  @include query($desktop-small) {
+    font-size: 16px;
+  }
+
+  @include query($desktop-hd) {
+    margin-top: 40px;
+  }
+}
