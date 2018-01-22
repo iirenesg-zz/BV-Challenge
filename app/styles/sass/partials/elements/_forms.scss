@@ -1,0 +1,52 @@
+label {
+  display: block;
+  font: 500 14px $font-family-base;
+  color: $base-dark;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  font: 24px 'Roboto', sans-serif;
+  color: $base-dark;  
+}
+
+input {
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  background-color: transparent;
+  width: 100%;
+  max-width: 500px;
+  transition: all .2s;
+}
+
+input:focus {
+  outline: none;
+
+  ~ .underline {
+    background-color: $main-red;
+  }
+}
+
+input:disabled {
+  background-color: $contrast-blue;
+  padding: 0;
+  
+  ~ .underline {
+    display: none;
+  }
+}
+
+input:invalid {
+  -webkit-box-shadow: inset 0px 0px 40px 0px $main-red;
+  -moz-box-shadow: inset 0px 0px 40px 0px $main-red;
+  box-shadow: inset 0px 0px 40px 0px $main-red;
+}
+
+input.valid:after {
+
+}
+
+input.error:after {
+
+}
