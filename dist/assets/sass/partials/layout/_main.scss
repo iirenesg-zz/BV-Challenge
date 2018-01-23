@@ -2,10 +2,19 @@ main {
   padding-top: 160px;
 }
 
+.site-wrapper {
+  overflow-x: hidden;
+}
+
 .main-wrapper {
-  width: 90%;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+
+  @include query($tablet) {
+    width: 90%;
+  }
 
   @include query($desktop-hd) {
     width: 80%;
@@ -53,9 +62,44 @@ main {
 }
 
 .col-left {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 3;
+  grid-row: 2 / 3;
+
+  @include query($tablet) {
+    grid-column: 2 / span 4;
+  }  
+
+  @include query($desktop-small) {
+    grid-column: 1 / span 6;
+    grid-row: 1 / 2;
+  }
 }
 
 .col-right {
-  grid-column: 7 / span 5;
+  grid-column: 1 / span 3;
+  grid-row: 1 / 2;
+
+  @include query($tablet) {
+    grid-column: 2 / span 4;
+  }
+  
+  @include query($desktop-small) {
+    grid-column: 7 / span 5;  
+  }
+}
+
+.l-content-relative {
+  padding-bottom: 0;
+
+  > div {
+    padding-bottom: 60px;
+  }
+
+  @include query($tablet) {
+    padding-bottom: 60px;
+
+    > div {
+      padding-bottom: 0;
+    }
+  }
 }

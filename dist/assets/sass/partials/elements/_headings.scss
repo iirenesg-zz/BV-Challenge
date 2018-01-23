@@ -5,6 +5,8 @@ h1 {
 .heading {
   font: italic 600 44px $font-family-base;
   color: $base-dark;
+  position: relative;
+  z-index: 2;
 }
 
 .subheading {

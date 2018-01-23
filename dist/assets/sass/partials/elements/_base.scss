@@ -17,7 +17,6 @@ body {
   width: 100%;
   min-height: 100%;
   position: relative;
-  overflow-x: hidden;
 }
 
 // Single direction margin
@@ -40,4 +39,9 @@ fieldset,
 hr{
   margin: 0 0 10px;
   padding: 0;
+}
+
+canvas {
+  position: relative;
+  z-index: 1;
 }
