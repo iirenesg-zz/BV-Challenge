@@ -1,16 +1,33 @@
 <header>
-  <div class="main-wrapper">
+  <div class="main-wrapper menu-bar">
 
     <div class="logo-container">
       {{#link-to 'index' class="logo"}}{{/link-to}}
     </div> {{! logo-container }}
 
-    <nav class="main-nav">
+    <nav class="nav main-nav">
       <ul>
         <li>{{#link-to 'report'}} Report {{/link-to}}</li>
         <li>{{#link-to 'settings'}} Settings {{/link-to}}</li>
       </ul>
     </nav>
+
+    <span id="menu-mobile-btn" class="icon icon-menu-mobile" {{ action "showMenu" }}></span>
     
   </div> {{! main-wrapper }}
 </header>
+
+<div id="mobile-nav" class="nav-mobile-container">
+  <nav class="nav mobile-nav">
+  <ul>
+    <li {{ action "showMenu" }}>{{#link-to 'report'}} <span>Report</span> {{/link-to}}</li>
+    <li {{ action "showMenu" }}>{{#link-to 'settings'}} <span>Settings</span> {{/link-to}}</li>
+  </ul>
+</nav>
+  <span class="btn-outlined btn-mobile">Log out of XYZ</span>
+  <span id="close-menu-btn" class="icon icon-menu-close" {{ action "showMenu" }}></span>
+  <div>
+
+    <div id="mobile-bg" class="mobile-bg"></div>
+  </div>{{! mobile-bg }}
+</div> {{! mobile-nav }}
