@@ -142,3 +142,21 @@
 .icon-arrow:hover:after {
   color: $accent-red;
 }
+
+.icon:before {
+  display: inline-block;
+  font-family: $font-icons;
+}
+
+.icon-menu-mobile:before {
+  font-size: 36px; 
+  content: '\f0c9';
+}
+
+.icon-menu-close:before {
+  content: '\f00d';
+  color: $main-red;
+  font-size: 36px;
+  padding: 10px;
+}
+

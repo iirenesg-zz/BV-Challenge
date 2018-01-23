@@ -40,3 +40,14 @@
 .hidden .field input{
   margin-left: 10px;
 }
+
+.field-message {
+  color: $main-red;
+  font-style: italic;
+  margin-left: 20px;
+  transition: all .5s;
+}
+
+.field-message-hidden {
+  opacity: 0;
+}
