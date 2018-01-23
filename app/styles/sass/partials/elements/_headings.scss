@@ -5,6 +5,8 @@ h1 {
 .heading {
   font: italic 600 44px $font-family-base;
   color: $base-dark;
+  position: relative;
+  z-index: 2;
 }
 
 .subheading {
@@ -31,5 +33,13 @@ h1 {
 
   @include query($desktop-small) {
     font-size: 16px;
+  }
+}
+
+.h-highlight {
+  font: 30px $font-family-accent;
+  
+  @include query($desktop-small) {
+    font-size: 38px;
   }
 }

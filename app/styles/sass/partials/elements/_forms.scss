@@ -37,16 +37,13 @@ input:disabled {
   }
 }
 
-input:invalid {
-  -webkit-box-shadow: inset 0px 0px 40px 0px $main-red;
-  -moz-box-shadow: inset 0px 0px 40px 0px $main-red;
-  box-shadow: inset 0px 0px 40px 0px $main-red;
+input:invalid ~ .input-icon:after, .error:after {
+  color: $main-red;
+  content: '\f057';
 }
 
-input.valid:after {
-
+.valid:after {
+  color: $score-green;
+  content: '\f058';
 }
 
-input.error:after {
-
-}

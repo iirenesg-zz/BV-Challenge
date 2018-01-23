@@ -35,25 +35,42 @@
   }
 }
 
-.risk-info {
+.risk-section {
+  position: relative;
+  z-index: 3;
+}
+
+.risk-title {
+  margin-bottom: 30px;
   grid-column: 1 / span 3;
-  grid-row-start: 3;
+  grid-row: 1 / 2;
 
   @include query($tablet) {
     grid-column: 3 / span 4;
-    grid-row-start: 1;
   }
 
   @include query($desktop-small) {
     grid-column: 5 / span 8;
   }
 
-  h2 {
-    margin-bottom: 30px;
+  @include query($desktop-hd) {
+    margin-bottom: 40px;
+  }
+}
 
-    @include query($desktop-hd) {
-      margin-bottom: 40px;
-    }
+.risk-info {
+  grid-column: 1 / span 3;
+  grid-row: 3 / 4;
+  margin-top: 60px;
+
+  @include query($tablet) {
+    grid-column: 3 / span 4;
+    grid-row: 2 / 3;
+    margin-top: 0;
+  }
+
+  @include query($desktop-small) {
+    grid-column: 5 / span 8;
   }
 }
 
@@ -67,28 +84,50 @@
 
   p {
     display: inline-block;
-    width: 90%;
+    width: 85%;
   }
 
   span {
     position: relative;
-    top: -15px;
+    top: -60px;
+
+    @include query($smartphone) {
+      top: -40px;
+    }
+
+    @include query($desktop-hd) {
+      top: -15px;
+    }
   }
 }
 
 .risk-subsection {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0;
+  padding: 20px 0 60px;
 
   p {
-    margin: 0;
-    width: 60%;
+    margin: 15px;
+    width: 100%;
   }
 
   img {
+    float: right;
     width: 215px;
     height: 30px;
+  }
+
+  @include query($tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+
+    p {
+      width: 60%;
+      margin: 0;
+    }
+
+    img {
+      float: none;
+    }
   }
 }
 
