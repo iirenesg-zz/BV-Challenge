@@ -1,0 +1,8 @@
+<div class="l-text {{ if right-aligned "info-col-right" }}">
+  <h3 class="h-h3">{{ label }}</h3>
+  <p class="{{ if highlight "h-highlight" }}">{{ info }}
+    {{#if isLink}}
+      <a href="{{link}}" class="icon-arrow"></a>
+    {{/if}}
+  </p>
+</div> {{! info-box }}
