@@ -25,6 +25,7 @@ export default Component.extend({
       let centerY = canvas.height/2;
       let radius = centerX - 35; 
       if(window.innerWidth < 480 || window.innerWidth >= 768 && window.innerWidth < 1200) radius += 10;
+      if(radius < 0) radius = 0;
 
       ctx.lineWidth = strokeWidth;
 
@@ -46,7 +47,7 @@ export default Component.extend({
     draw();
 
     //Redraw the canvas on window resize
-    Ember.$(window).resize(() => {
+    $(window).resize(() => {
       draw();
     });
   }

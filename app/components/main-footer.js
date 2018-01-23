@@ -1,11 +1,12 @@
 import Component from '@ember/component';
+import { inject } from '@ember/service';
 
 export default Component.extend({
 
   classNameBindings: ['isSettings:footer-bg'],
   isSettings: false,
 
-  router: Ember.inject.service("-routing"),
+  router: inject("-routing"),
 
   //Set an observer on the router to invert the footer colors on the settings route
   didInsertElement: function() {
@@ -15,7 +16,7 @@ export default Component.extend({
   },
 
   //Function call - every time the route changes
-  routeChanged (router, propertyName) {
+  routeChanged (router) {
     let currentRoute = router.get('currentRouteName');
     currentRoute == 'settings' ? this.set('isSettings', true) : this.set('isSettings', false);
   }
