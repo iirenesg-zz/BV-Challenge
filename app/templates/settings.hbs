@@ -18,10 +18,10 @@
     <div class="member-form col-right">
 
       <div class="field-box">
-        {{ field-default id="name-default" name='name' type='text' label='Name' }}
+        {{ field-default id="name-default" name="name" type="text" label="Name" value="Jessica Alba" }}
         <form id="name-hidden" class="form-hidden hidden">
-          {{ field-hidden name='first-name' type='text' label='First Name' autofocus='true' }}
-          {{ field-hidden name='last-name' type='text' label='Last Name' autofocus='false' }}
+          {{ field-hidden name="first-name" type="text" label="First Name" autofocus="true" }}
+          {{ field-hidden name="last-name" type="text" label="Last Name" }}
           <div class="button-box">
             <button class="btn-outlined btn-form" {{action "saveName"}}>Save</button>
             <button class="btn-simple" {{action "cancel" "name"}}>Cancel</button>
@@ -30,24 +30,24 @@
       </div> {{! field-box }}
 
       <div class="field-box">
-        {{ field-default id="email-default" name='email' type='email' label='Email Address' }}
+        {{ field-default id="email-default" name="email" type="email" label="Email Address" value="jessica@honest.com" }}
         <form id="email-hidden" class="form-hidden hidden">
-          {{ field-hidden name='new-email' type='email' label='Email Address' autofocus='true' }}
+          {{ field-hidden name="new-email" type="email" label="Email Address" autofocus="true" }}
           <div class="button-box">
-            <button class="btn-outlined btn-form">Save</button>
+            <button class="btn-outlined btn-form" {{action "saveEmail"}}>Save</button>
             <button class="btn-simple" {{action "cancel" "email"}}>Cancel</button>
           </div> {{! button-box }}
         </form> {{! form-hidden }}
       </div> {{! field }}
 
       <div class="field">
-        {{ field-default id="password-default" name='password' type='password' label='Password' }}
+        {{ field-default id="password-default" name="password" type="password" label="Password" value="12345678" }}
         <form id="password-hidden" class="form-hidden hidden">
-          {{ field-hidden name='old-password' type='password' label='Enter Current Password' autofocus='true' }}
-          {{ field-hidden name='new-password' type='password' label='New Password  (8 character minimum)' autofocus='false' }}
-          {{ field-hidden name='confirm-password' type='password' label='Re-enter New Password' autofocus='false' }}
+          {{ field-hidden name="old-password" type="password" label="Enter Current Password" autofocus="true" }}
+          {{ field-hidden name="new-password" type="password" label="New Password  (8 character minimum)" }}
+          {{ field-hidden name="confirm-password" type="password" label="Re-enter New Password" }}
           <div class="button-box">
-            <button class="btn-outlined btn-form">Save</button>
+            <button class="btn-outlined btn-form" {{action "savePassword"}}>Save</button>
             <button class="btn-simple" {{action "cancel" "password"}}>Cancel</button>
           </div> {{! button-box }}
         </form> {{! form-hidden }}
