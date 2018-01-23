@@ -1,3 +1,12 @@
+.icon:before {
+  display: inline-block;
+  font-family: $font-icons;
+}
+
+//-------------------------
+//   Social media icons
+//-------------------------
+
 .icon-social {
   width: 50px;
   height: 50px;
@@ -61,6 +70,10 @@
   content: '\f0d2'; 
 }
 
+//-------------------------
+//   Contact icons
+//-------------------------
+
 .icon-contact {
   width: 30px;
   height: 30px;
@@ -88,6 +101,10 @@
   top: -5px;
 }
 
+//-------------------------
+//   Bullet icons
+//-------------------------
+
 .bullet-icon:before {
     font: 20px $font-icons;
     color: $main-red;
@@ -108,6 +125,10 @@
   content: '\f05a';
 }
 
+//-------------------------
+//   Input icons
+//-------------------------
+
 .input-icon:after {
   position: absolute;
   top: 30px;
@@ -123,6 +144,10 @@
     font-size: 28px;
   }
 }
+
+//-------------------------
+//   Arrow icons
+//-------------------------
 
 .icon-arrow {
   width: 20px;
@@ -143,10 +168,9 @@
   color: $accent-red;
 }
 
-.icon:before {
-  display: inline-block;
-  font-family: $font-icons;
-}
+//-------------------------
+//   Mobile menu icons
+//-------------------------
 
 .icon-menu-mobile:before {
   font-size: 36px; 

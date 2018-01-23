@@ -1,0 +1,52 @@
+//-----------------
+//   SVG Shapes
+//-----------------
+
+.svg-bg {
+  position: absolute;
+  z-index: 0;
+}
+
+.tax-bg {
+  fill: $base-dark;
+}
+
+.update-bg {
+  fill: $main-red;
+}
+
+.overview-bg {
+  fill: $contrast-blue;
+}
+
+//-------------------------
+//    Background Shapes
+//-------------------------
+
+.main-bg {
+  padding-top: 160px;
+  width: 300vw;
+  z-index: -2;
+}
+
+.main-bg-l {
+  display: none;
+
+  @include query($desktop-small) {
+    display: block;
+  }
+}
+
+.main-bg-s {
+  @include query($desktop-small) {
+    display: none;
+  }
+}
+
+.company-overview-bg {
+  background-color: $contrast-blue;
+
+  @include query($tablet) {
+    background-color: transparent;
+  }
+}

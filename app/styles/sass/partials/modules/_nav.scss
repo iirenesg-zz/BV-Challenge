@@ -1,3 +1,7 @@
+//-----------------
+//   General Nav
+//-----------------
+
 nav li {
   list-style: none;
   display: inline-block;
@@ -21,6 +25,10 @@ nav li {
   }
 }
 
+//-----------------
+//    Header Nav
+//-----------------
+
 .main-nav {
   display: none;
 
@@ -36,6 +44,10 @@ nav li {
     display: block;
   }
 }
+
+//-----------------
+//    Mobile Nav
+//-----------------
 
 .mobile-nav {
 
@@ -54,50 +66,6 @@ nav li {
     top: 20px;
     font: inherit;
     font-weight: 600;
-  }
-}
-
-.footer-top-nav {
-  h4 {
-    color: $main-red;
-    font: 36px $font-family-accent;
-  }
-
-  li {
-    display: block;
-    margin-top: 25px;
-  }
-
-  a {
-    font-size: 18px;
-  }
-}
-
-.footer-bottom-nav {
-
-  li {
-    padding: 0 12px;
-    border-left: 1px solid $base-dark;
-  }
-
-  li:first-child {
-    padding-left: 0;
-    border-left: none;
-  }
-
-}
-
-.footer-bg .footer-bottom-nav {
-  li {
-    border-color: $base-white;
-  }
-}
-
-.icon-menu-mobile {
-  padding-top: 25px;
-
-  @include query($tablet) {
-    display: none;
   }
 }
 
@@ -147,6 +115,14 @@ nav li {
   opacity: 1;
 }
 
+.icon-menu-mobile {
+  padding-top: 25px;
+
+  @include query($tablet) {
+    display: none;
+  }
+}
+
 .icon-menu-close {
   background-color: $base-white;
   opacity: 0;
@@ -161,4 +137,42 @@ nav li {
 
 .icon-menu-close-shown {
   opacity: 1;
+}
+
+//-----------------
+//    Footer Nav
+//-----------------
+
+.footer-top-nav {
+  h4 {
+    color: $main-red;
+    font: 36px $font-family-accent;
+  }
+
+  li {
+    display: block;
+    margin-top: 25px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+.footer-bottom-nav {
+  li {
+    padding: 0 12px;
+    border-left: 1px solid $base-dark;
+  }
+
+  li:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.footer-bg .footer-bottom-nav {
+  li {
+    border-color: $base-white;
+  }
 }

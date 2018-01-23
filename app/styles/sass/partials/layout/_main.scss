@@ -2,6 +2,10 @@ main {
   padding-top: 160px;
 }
 
+//-----------------
+//    Wrappers
+//-----------------
+
 .site-wrapper {
   overflow-x: hidden;
 }
@@ -21,6 +25,10 @@ main {
   }
 }
 
+//-----------------
+//      Grid
+//-----------------
+
 .section-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -36,30 +44,10 @@ main {
   }
 }
 
-.l-content {
-  padding: 60px 0;
 
-  @include query($desktop-hd) {
-    padding: 80px 0;  
-  }
-}
-
-.m-content {
-  padding: 40px 0;
-
-  @include query($desktop-hd) {
-    padding: 50px 0;  
-  }
-}
-
-.bg-dark {
-  background-color: $base-dark;
-  color: $base-white;
-}
-
-.bg-light {
-  background-color: $contrast-blue;
-}
+//-----------------
+//   Column Grid
+//-----------------
 
 .col-left {
   grid-column: 1 / span 3;
@@ -88,6 +76,18 @@ main {
   }
 }
 
+//-----------------
+//     Spacing
+//-----------------
+
+.l-content {
+  padding: 60px 0;
+
+  @include query($desktop-hd) {
+    padding: 80px 0;  
+  }
+}
+
 .l-content-relative {
   padding-bottom: 0;
 
@@ -102,4 +102,25 @@ main {
       padding-bottom: 0;
     }
   }
+}
+
+.m-content {
+  padding: 40px 0;
+
+  @include query($desktop-hd) {
+    padding: 50px 0;  
+  }
+}
+
+//-----------------
+//  Color blocks
+//-----------------
+
+.bg-dark {
+  background-color: $base-dark;
+  color: $base-white;
+}
+
+.bg-light {
+  background-color: $contrast-blue;
 }

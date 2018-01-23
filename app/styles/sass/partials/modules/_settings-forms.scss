@@ -3,22 +3,6 @@
   margin: 0 auto;
 }
 
-.field button, .button-box {
-  margin: 20px 0 60px;
-}
-
-.button-box button {
-  margin-right: 15px;
-}
-
-.field-hidden {
-  margin-bottom: 30px;
-
-  input {
-    height: 35px;
-  }
-}
-
 .field {
   position: relative;
 
@@ -34,6 +18,22 @@
 
   input {
     transition: all .5s;
+  }
+}
+
+.field button, .button-box {
+  margin: 20px 0 60px;
+}
+
+.button-box button {
+  margin-right: 15px;
+}
+
+.field-hidden {
+  margin-bottom: 30px;
+
+  input {
+    height: 35px;
   }
 }
 
