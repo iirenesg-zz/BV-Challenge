@@ -1,7 +1,10 @@
 import Component from '@ember/component';
+import $ from 'jquery';
 
 export default Component.extend({
-  currentRisk: 0.84,
+  currentRisk: 0.84, //Current score
+  //Values for the risk levels in order (from high risk to low risk)
+  //The values must add up to 1
   values: [
   {value: 0.1, color: '#EF1111'},
   {value: 0.15, color: '#F57423'},
@@ -21,6 +24,7 @@ export default Component.extend({
 
     var ctx = canvas.getContext("2d");
 
+    //Callback function - Draws the whole canvas
     function draw() {
       canvas.width = parent.getBoundingClientRect().width;
       canvas.height = parent.getBoundingClientRect().width;   
@@ -31,6 +35,7 @@ export default Component.extend({
 
       ctx.lineWidth = 20;
 
+      //Draws the 5 color arcs
       self.values.forEach((v) => {
         ctx.beginPath();
         let currentAngle = (endAngle * v.value) + lastAngle;
@@ -40,11 +45,13 @@ export default Component.extend({
         lastAngle = currentAngle;
       })
 
+      //Fill the remaining arc with a dark color
       ctx.beginPath();
       ctx.strokeStyle ='rgba(0, 2, 69, 0.64)';
-      ctx.arc(centerX, centerY, radius, riskAngle, Math.PI/2);
+      ctx.arc(centerX, centerY, radius, riskAngle, Math.PI/4);
       ctx.stroke();
 
+      //Current risk score selector
       ctx.lineWidth = 10;
       ctx.lineCap="round";
       ctx.beginPath();
@@ -60,6 +67,7 @@ export default Component.extend({
 
     draw();
 
+    //Redraw the canvas on window resize
     Ember.$(window).resize(() => {
       draw();
     });

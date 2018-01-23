@@ -1,8 +1,9 @@
 import Component from '@ember/component';
+import $ from 'jquery';
 
 export default Component.extend({
-  amtTotal: 30,
-  amtCurrent: 22,
+  amtTotal: 30, //Total amount of days in the cycle
+  amtCurrent: 22, //Amount of remaining days in the cycle
 
   didInsertElement() {
     let self = this;
@@ -14,6 +15,7 @@ export default Component.extend({
     let startAngle = 3*Math.PI/4;
     let endAngle = 9*Math.PI/4;
 
+    //Callback function - Draws the whole canvas
     function draw() {
       if(window.innerWidth > 1024) strokeWidth = 20;
       canvas.width = parent.getBoundingClientRect().width;
@@ -26,11 +28,13 @@ export default Component.extend({
 
       ctx.lineWidth = strokeWidth;
 
+      //Draws the full arc 
       ctx.beginPath();
       ctx.arc(centerX, centerY, radius, startAngle, endAngle);
       ctx.strokeStyle = 'rgba(255,255,255,0.48)';
       ctx.stroke();
 
+      //Draws the current arc (Ramaining days) on top 
       ctx.beginPath();
       let percent = self.amtCurrent/self.amtTotal;
       let currentAngle = ((7*Math.PI/4)*percent) + startAngle;
@@ -41,6 +45,7 @@ export default Component.extend({
 
     draw();
 
+    //Redraw the canvas on window resize
     Ember.$(window).resize(() => {
       draw();
     });
